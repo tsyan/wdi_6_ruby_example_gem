@@ -1,6 +1,6 @@
 module GaExampleGem
 
-  # This is the configuration module that 
+  # This is the configuration module that
   # allows us to setup an api_key
   # using a pattern close to the Twitter or MtGox gem
 	module Configuration
@@ -8,7 +8,7 @@ module GaExampleGem
     # This is our API key. We aren't really using it
     # anywhere, but you could imagine using it
     # with HTTP requests
-    # This is tricky, this adds these attr_accessors to the CLASS
+    # This is tricky, this adds these attr_accessors to any CLASS that 'include's it
 		attr_accessor :api_key, :oauth_key
 
     # This yields a block that can be iterated on
@@ -18,7 +18,7 @@ module GaExampleGem
       yield self
     end
 
-    # This reset our API key and is called when the 
+    # This reset our API key and is called when the
     # client is initialized
     def reset
       self.api_key = nil
