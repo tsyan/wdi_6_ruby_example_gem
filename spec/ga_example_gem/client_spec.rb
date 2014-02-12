@@ -36,7 +36,7 @@ describe GaExampleGem::Client do
     it 'fetches multiple xkcd webcomics' do
       comics = @client.get_xkcd_from_year(2008)
 
-      expect(a_request(:get,'http://xkcd-unofficial-api.herokuapp.com/xkcd?year=2008').to have_been_made
+      expect(a_request(:get,'http://xkcd-unofficial-api.herokuapp.com/xkcd?year=2008')).to have_been_made
 
       expect(comics.first["title"]).to eq "The Sea"
     end
